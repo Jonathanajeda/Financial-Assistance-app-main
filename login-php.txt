@@ -1,0 +1,46 @@
+<?php
+header("Access-Control-Allow-Origin: http://localhost:8100");
+header("Access-Control-Allow-Headers: Content-Type");
+
+// Database connection details
+$host = 'localhost'; // Replace with your database hostname
+$user_name = 'root'; // Replace with your database username
+$pass_word = ''; // Replace with your database password
+$dbname = 'ionic-batelec'; // Replace with your database name
+
+// Create a new PDO instance
+$conn = new PDO("mysql:host=$host;dbname=$dbname", $user_name, $pass_word);
+
+// Retrieve form values
+$accountNumber = $_POST['accountNumber'];
+$password = $_POST['password'];
+
+// Prepare and execute the SQL query
+$sql = "SELECT * FROM consumertable WHERE accountNumber = ? AND password = ?";
+$stmt = $conn->prepare($sql);
+$stmt->execute([$accountNumber, $password]);
+
+// Check if a user with matching credentials exists
+$user = $stmt->fetch(PDO::FETCH_ASSOC);
+if ($user) {
+  // User found, return success response
+  $response = [
+    'status' => 'success',
+    'message' => 'Login successful!',
+    'user' => $user
+  ];
+} else {
+  // User not found, return error response
+  $response = [
+    'status' => 'error',
+    'message' => 'Invalid email or password.'
+  ];
+}
+
+// Close the database connection
+$conn = null;
+
+// Send the response as JSON
+header('Content-Type: application/json');
+echo json_encode($response);
+?>

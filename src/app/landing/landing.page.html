@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-toolbar class="transparent-header">
+    <ion-buttons slot="start">
+      <div class="menu-toggle-button" *ngIf="isMinimized">
+        <ion-menu-button auto-hide="false"></ion-menu-button>
+      </div>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-button [routerLink]="['/about']" expand="block">ABOUT</ion-button>
+      <ion-button [routerLink]="['/login']" expand="block">LOGIN</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <div class="page-background">
+    <ion-grid>
+      <ion-row>
+        <ion-col align-self-center>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+</ion-content>

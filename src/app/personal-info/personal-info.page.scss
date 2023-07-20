@@ -1,0 +1,47 @@
+ion-content {
+  --background: #3f6379; /* Use a light blue color or any other color that complements the DSWD theme */
+}
+
+ion-item {
+  opacity: 0.6;
+}
+
+.logo-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px; /* Add margin to separate logo from the form */
+  background-image: url('/assets/logo.png'); /* Path to your logo image */
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  min-height: 200px; /* Set a height to ensure the logo is visible */
+}
+
+
+.logo-image {
+  max-width: 200px; /* Adjust the size of the logo as needed */
+  max-height: 200px;
+}
+ion-header {
+  text-align: center;
+}
+/* Customize the DSWD header color */
+ion-toolbar.dswd-primary {
+--ion-background-color: #0073af; /* Use the official DSWD primary color */
+--ion-color: #ffffff; /* Use the official DSWD text color */
+}
+
+/* Customize the DSWD logo/icon */
+.dswd-logo-icon {
+font-size: 24px;
+color: #ffffff; /* Use the official DSWD text color */
+}
+
+/* Customize the DSWD title */
+.dswd-title {
+font-size: 20px;
+font-weight: bold;
+color: #ffffff; /* Use the official DSWD text color */
+}

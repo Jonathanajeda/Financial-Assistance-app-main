@@ -1,0 +1,145 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>San Luis Batangas Department of Social Welfare and Development</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="logout()">Logout</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="ion-padding">
+  <br><br>
+  <div class="content-wrapper">
+    <ion-header>
+      <h1>Welcome Beneficiaries</h1>
+      <br><br>
+    </ion-header>
+
+    <ion-card color="light">
+      <ion-card-header color="tertiary">
+        <ion-card-title>Solo Parent documentary on account of the detention or criminal conviction of the spouse</ion-card-title>
+      </ion-card-header>
+      <ion-card-content padding="10">
+        <ion-list color="medium">
+          <ion-item>
+            <ion-label>1. Birth Certificate</ion-label>
+          </ion-item>
+
+          <ion-item>
+            <ion-label>2. Marriage Certificate</ion-label>
+          </ion-item>
+
+          <ion-item>
+            <ion-label>3. Certificate of Detention</ion-label>
+          </ion-item>
+
+          <ion-item>
+            <ion-label>4. Sworn Affidavit declaring that the <br> solo parent is not cohabiting <br>with a partner or co-parent, and <br> has the sole parental care and <br> support of the child.</ion-label>
+          </ion-item>
+        </ion-list>
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card color="light">
+      <ion-card-header color="tertiary">
+        <ion-card-title>Solo Parent Documentary on of physical or mental incapacity of the Spouse:</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-list>
+          <ion-item>
+            <ion-label>1. Birth Certificate of Children <br> (22 years old below) (Xerox copy).</ion-label>
+          </ion-item>
+
+          <ion-item>
+            <ion-label>2. Marriage Certificate <br> (Xerox Copy) or affidavit of <br> cohabitation</ion-label>
+          </ion-item>
+
+          <ion-item>
+            <ion-label>3.Medical Record or medical <br> abstract evidencing the  <br> physical or mental state of the <br> incapacitated spouse issued not <br> more than three months before the submission (Xerox copy)</ion-label>
+          </ion-item>
+
+          <ion-item lines="none">
+            <ion-label>4. Sworn Affidavit declaring that  <br> the solo parent is not cohabiting <br> with a partner or co-parent and <br> has the sole parental care and <br> support of the child</ion-label>
+          </ion-item>
+        </ion-list>
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card color="light">
+      <ion-card-header color="tertiary">
+        <ion-card-title>Solo Parent documentary Requirement on account of abandonment by the spouse</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-list>
+          <ion-item>
+            <ion-label>1. Birth Certificate of Children <br> (22 years old below) (Xerox copy)</ion-label>
+          </ion-item>
+
+          <ion-item>
+            <ion-label>2. Marriage Certificate <br> (Xerox Copy)</ion-label>
+          </ion-item>
+
+          <ion-item>
+            <ion-label>3. Police or barangay record <br> on the fact of abandonment</ion-label>
+          </ion-item>
+
+          <ion-item lines="none">
+            <ion-label>4. Sworn Affidavit declaring that <br> the solo parent is not cohabiting with a partner or co-parent and has the sole parental care and support of the child</ion-label>
+          </ion-item>
+        </ion-list>
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card color="light">
+      <ion-card-header color="tertiary">
+        <ion-card-title>Solo parent documentary Requirement on account of unmarried father or mother who keeps and rears the child</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-list>
+          <ion-item>
+            <ion-label>1. Birth Certificate of Children (22 years old below) (Xerox copy)</ion-label>
+          </ion-item>
+
+          <ion-item>
+            <ion-label>2. Certificate of no Marriage</ion-label>
+          </ion-item>
+
+          <ion-item>
+            <ion-label>3. Affidavit of a barangay official attesting that the solo parent is a resident of the barangay and that the children are under the parental care and support of the applicant</ion-label>
+          </ion-item>
+
+          <ion-item lines="none">
+            <ion-label>4. Sworn Affidavit declaring that the solo parent is not cohabiting with a partner or co-parent and has the sole parental care and support of the child</ion-label>
+          </ion-item>
+        </ion-list>
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card color="light">
+      <ion-card-header color="tertiary">
+        <ion-card-title>Solo parent documentary Requirement on account of pregnant woman</ion-card-title>
+      </ion-card-header>
+      <ion-card-content color="light">
+        <ion-list>
+          <ion-item>
+            <ion-label>1. Medical Record of pregnancy</ion-label>
+          </ion-item>
+
+          <ion-item>
+            <ion-label>2. Affidavit of a barangay official <br> attesting that the applicant solo parent is a resident of the barangay and that the applicant has no spouse</ion-label>
+          </ion-item>
+
+          <ion-item>
+            <ion-label>3. Sworn Affidavit declaring that the solo parent is not cohabiting with a partner or co-parent and has the sole parental care and support of the child</ion-label>
+          </ion-item>
+        </ion-list>
+      </ion-card-content>
+    </ion-card>
+
+
+    <br><ion-button [routerLink]="['/personal-info']" shape = "round" expand = "block" color="success">Apply Now</ion-button>
+    <br><ion-button [routerLink]="['/view-info']" shape = "round" expand = "block" color="success">View Request Status</ion-button>
+    

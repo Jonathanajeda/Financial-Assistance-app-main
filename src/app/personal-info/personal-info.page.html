@@ -1,0 +1,43 @@
+<ion-header>
+  <ion-toolbar>
+     <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>
+      Personal Information
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding logo-container">
+  <div class="logo-container">
+    <img src="/assets/12.png" alt="DSWD Logo" class="logo-image">
+  </div>
+  <ion-item>
+    <ion-label position="floating">Name</ion-label>
+    <ion-input [(ngModel)]="personalInfo.name"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating">Email</ion-label>
+    <ion-input [(ngModel)]="personalInfo.email"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating">Phone</ion-label>
+    <ion-input [(ngModel)]="personalInfo.phone"></ion-input>
+  </ion-item>
+
+  <!-- Add multiple file input for uploading files -->
+  <input type="file" (change)="onFilesChange($event)" accept="image/*" multiple>
+
+  <!-- Display selected files -->
+  <ion-list *ngIf="personalInfo.files.length > 0">
+    <ion-list-header>Selected Files:</ion-list-header>
+    <ion-item *ngFor="let file of personalInfo.files">
+      {{ file.name }}
+    </ion-item>
+  </ion-list>
+
+  <ion-button expand="full" color="primary" (click)="savePersonalInfo()">Submit</ion-button>
+  <br><ion-button [routerLink]="['/view-info']" shape="round" expand="block" color="success">View Request Status</ion-button>
+
+</ion-content>

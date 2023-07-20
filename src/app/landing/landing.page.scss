@@ -1,0 +1,11 @@
+ion-content {
+  --background: url('/assets/dswd-lg.jpg') no-repeat center center / cover;
+}
+
+
+.logo {
+  width: 50px; /* Adjust the width as per your logo size */
+  height: 50px; /* Adjust the height as per your logo size */
+  position: absolute;
+  left: 10px; /* Adjust the left position as per your needs */
+}

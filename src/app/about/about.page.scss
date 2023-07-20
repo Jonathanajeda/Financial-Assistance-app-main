@@ -1,0 +1,63 @@
+* {
+  font-family: 'Oswald';
+}
+
+ion-title.app-title {
+  color: #bfa721;
+}
+
+.container {
+  padding: 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.8); /* Add a semi-transparent white background */
+}
+
+.description {
+  font-size: 28px;
+  margin-bottom: 15px;
+  color: black;
+  font-style: bold;
+}
+
+.description-text {
+  font-size: 18px;
+  text-align: justify;
+  margin: 0 auto;
+  max-width: 800px;
+  color: black;
+}
+
+.contact-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.contact-links p {
+  font-size: 18px;
+  margin-right: 10px;
+  color: black;
+}
+
+.contact-links a {
+  font-size: 18px;
+  color: #007bff;
+  text-decoration: none;
+  border-bottom: 2px solid transparent;
+  transition: border-color 0.3s ease-in-out;
+}
+
+.contact-links a:hover {
+  border-color: #007bff;
+}
+
+ion-content {
+  --background: url('/assets/dswd3.jpg') no-repeat center center / cover;
+  opacity: 0.5;
+}

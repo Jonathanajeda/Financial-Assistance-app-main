@@ -1,0 +1,42 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #F7F7F7;
+}
+
+.dswd-logo {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #00468B;
+  margin-bottom: 2rem;
+}
+
+.button {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.already {
+  color: #666666;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+ion-button {
+  --border-radius: 30px;
+  --padding-start: 2rem;
+  --padding-end: 2rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+ion-button[color="primary"] {
+  --background: #00468B;
+}
+
+ion-button[color="danger"] {
+  --background: #FF3939;
+}

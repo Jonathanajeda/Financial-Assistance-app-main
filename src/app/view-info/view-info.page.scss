@@ -1,0 +1,16 @@
+  ion-content {
+    --background: #3f6379; /* Use a light blue color or any other color that complements the DSWD theme */
+  }
+.logo-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 20px; /* Add margin to separate logo from the form */
+  background-image: url('/assets/logo.png'); /* Path to your logo image */
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  min-height: 200px; /* Set a height to ensure the logo is visible */
+}  
+  
+ 

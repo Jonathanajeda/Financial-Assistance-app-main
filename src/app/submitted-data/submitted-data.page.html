@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Submitted Data
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content scroll="true">
+  <ion-list>
+    <ion-item>
+      <ion-label class="label">#</ion-label>
+      <ion-label class="label">Name</ion-label>
+      <ion-label class="label">Email</ion-label>
+      <ion-label class="label">Phone</ion-label>
+      <ion-label class="label">Status</ion-label>
+    </ion-item>
+    <ion-item *ngFor="let info of personalInfoList; let i = index">
+      <ion-label>{{ i + 1 }}</ion-label> <!-- Auto-increment row number -->
+      <ion-label>{{ info.name }}</ion-label>
+      <ion-label>{{ info.email }}</ion-label>
+      <ion-label>{{ info.phone }}</ion-label>
+      <ion-label>{{ info.status }}</ion-label>
+      <ion-buttons slot="end"> <!-- Add the slot attribute to align the button to the right -->
+        <ion-button *ngIf="info.status !== 'Approved'" (click)="approveSubmission(i)">Verify</ion-button>
+      </ion-buttons>
+      <ion-checkbox slot="end" [(ngModel)]="info.selected"></ion-checkbox>
+    </ion-item>
+  </ion-list>
+
+  <ion-button expand="full" color="danger" (click)="deletePersonalInfo()">Delete</ion-button>
+
+  <!-- Add the "View All Info" button -->
+  <ion-button expand="full" color="secondary" (click)="viewAllInfo()">View All Info</ion-button>
+</ion-content>
+  

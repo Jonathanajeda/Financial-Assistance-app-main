@@ -1,0 +1,44 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      View Information
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content scroll="true" class="ion-padding logo-container">
+    <div class="logo-container">
+      <img src="/assets/d1.png" alt="DSWD Logo" class="logo-image">
+    </div>
+  <ion-list>
+    <!-- Table Header -->
+    <ion-item>
+      <ion-label class="label">#</ion-label> <!-- Add a label for the numbering column -->
+      <ion-label class="label">Name</ion-label>
+      <ion-label class="label">Email</ion-label>
+      <ion-label class="label">Phone</ion-label>
+      <ion-label class="label">Files</ion-label>
+      <ion-label class="label">Status</ion-label> <!-- Move Status to the last column -->
+    </ion-item>
+
+    <!-- Table Rows -->
+    <ion-item *ngFor="let info of personalInfoList; let i = index">
+      <ion-label>{{ i + 1 }}</ion-label> <!-- Use the index to display the number -->
+      <ion-label>{{ info.name }}</ion-label>
+      <ion-label>{{ info.email }}</ion-label>
+      <ion-label>{{ info.phone }}</ion-label>
+      <ion-label>
+        <ion-list *ngIf="info.files && info.files.length > 0">
+          <ion-item *ngFor="let file of info.files">
+            <ion-icon name="document"></ion-icon>
+            <ion-label>{{ file.name }}</ion-label>
+          </ion-item>
+        </ion-list>
+        <ion-label *ngIf="!info.files || info.files.length === 0">No files</ion-label>
+      </ion-label>
+      <ion-label>{{ info.status }}</ion-label> <!-- Move Status to the last column -->
+    </ion-item>
+  </ion-list>
+  <br><ion-button [routerLink]="['/requirement-list']" shape = "round" expand = "block" color="success">Back</ion-button>
+</ion-content>
+
